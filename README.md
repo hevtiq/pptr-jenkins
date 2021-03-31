@@ -46,8 +46,8 @@
 ```json
 // package.json
 "scripts": {
-    "e2e-test": "./node_modules/mocha/bin/mocha --timeout=30000 ./test/e2e.test.js",
-    "smoke-test": "./node_modules/mocha/bin/mocha --timeout=30000 ./test/smoke.test.js"
+    "e2e-test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/e2e.test.js",
+    "smoke-test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/smoke.test.js"
   },
 ```
 
