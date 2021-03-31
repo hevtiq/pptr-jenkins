@@ -1,0 +1,25 @@
+{
+  "name": "pptr-jenkins",
+  "version": "1.0.0",
+  "description": "CI/CD with Puppeteer and Jenkins",
+  "main": "index.js",
+  "scripts": {
+    "e2e-test": "./node_modules/mocha/bin/mocha --timeout=30000 ./test/e2e.test.js",
+    "smoke-test": "./node_modules/mocha/bin/mocha --timeout=30000 ./test/smoke.test.js"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Jenkins",
+    "Automation",
+    "Builds",
+    "CI/CD"
+  ],
+  "author": "Viet Hoang",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "prettier": "^2.2.1",
+    "puppeteer": "^8.0.0"
+  }
+}
