@@ -67,10 +67,10 @@
 #### 1.3.2.1 From URL
 
 - Forces a restart without waiting for builds to complete.
-[Jenkins cli](http://localhost:[port]/restart)
+[Jenkins restart](http://localhost:[port]/restart)
 
 - Allows all running jobs to complete. New jobs will remain in the queue to run after the restart is complete.
-[Jenkins cli](http://localhost:[port]/safeRestart)
+[Jenkins safeRestart](http://localhost:[port]/safeRestart)
 
 #### 1.3.2.2 From cmd/batch file
 
@@ -107,13 +107,16 @@ Start/stop jenkins in Docker
 ### 1.4 Fix Jenkins Console Log Encoding Issue on Windows
 
 Problem: UTF-8 char encoding does not work on console (Linux)
-Fix: java -Dfile.encoding=UTF-8 <remain_command>
-Add parameter -Dfile.encoding=UTF8 to file C:\Program Files\Jenkins\jenkins.xml
+Fix: `java -Dfile.encoding=UTF-8 <remain_command>`
+Add parameter `-Dfile.encoding=UTF8` to file `C:\Program Files\Jenkins\jenkins.xml`
+
+```xml
 <arguments>-Xrs -Xmx256m  -Dfile.encoding=UTF8 -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -jar "C:\Program Files\Jenkins\jenkins.war" --httpPort=<port> --webroot="%LocalAppData%\Jenkins\war"</arguments>
+```
 
 ### 1.5 View jenkins info (ex: secret)
 
-%LocalAppData%\Jenkins\.jenkins
+`%LocalAppData%\Jenkins\.jenkins`
 
 1.6 Build
 
@@ -137,9 +140,9 @@ tests
 Description: Build test with choice
 
 In Build > Shell in Window
-npm run %script%
+`npm run %script%`
 
 In Build > Shell in Mac/Linux
-npm run $script
+`npm run $script`
 
 ## 2. Start project
